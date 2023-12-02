@@ -1,4 +1,5 @@
 app = "portfolio-duda-917f"
+primary_region = "gru"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = [ ]
