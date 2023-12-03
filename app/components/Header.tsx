@@ -10,7 +10,7 @@ interface MenuLinkProps {
 }
 
 const MenuLink = ({ to, children }: PropsWithChildren<MenuLinkProps>) => (
-  <NavLink to={to} className="flex underline">
+  <NavLink to={to} className="flex flex-1 underline">
     {children}
   </NavLink>
 );

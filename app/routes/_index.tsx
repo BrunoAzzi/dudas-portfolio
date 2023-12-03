@@ -8,7 +8,7 @@ export const meta: MetaFunction = () => [{ title: "Remix Notes" }];
 
 export default function Index() {
   return (
-    <div className="flex flex-col gap-14 items-center max-w-screen-xl mx-auto px-20">
+    <div className="flex flex-col gap-14 items-center mx-auto px-20">
       <Header />
       <div className="grid grid-cols-2 gap-12">
         <VerticalCaseCard
