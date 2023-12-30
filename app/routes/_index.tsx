@@ -9,6 +9,11 @@ import { DudasGallery } from "~/components/ImageGallery";
 export const meta: MetaFunction = () => [
   { title: "Portfolio | Eduarda" },
   {
+    name: "description",
+    content:
+      "Sou uma profissional generalista que aprecia participar de todas as etapas do guarda-chuva de UX, desde a imersão no contexto do usuário até o design visual (UI). Busco proporcionar experiências incríveis com ideias inovadoras e estratégias inteligentes.",
+  },
+  {
     property: "og:description",
     content:
       "Sou uma profissional generalista que aprecia participar de todas as etapas do guarda-chuva de UX, desde a imersão no contexto do usuário até o design visual (UI). Busco proporcionar experiências incríveis com ideias inovadoras e estratégias inteligentes.",
