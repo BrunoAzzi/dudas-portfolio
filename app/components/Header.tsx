@@ -1,22 +1,9 @@
-import { NavLink } from "@remix-run/react";
-import { LiHTMLAttributes, PropsWithChildren } from "react";
+import { Link } from "@remix-run/react";
+import { LiHTMLAttributes } from "react";
 
 import { ArrowDownIcon } from "./icons/ArrowDownIcon";
 import { ArrowExternalLink } from "./icons/ArrowExternalLink";
 import { Download } from "./icons/Download";
-
-interface MenuLinkProps {
-  to: string;
-}
-
-const MenuLink = ({ to, children }: PropsWithChildren<MenuLinkProps>) => (
-  <NavLink
-    to={to}
-    className="flex flex-1 underline text-secondary text-xl font-semibold font-sans"
-  >
-    {children}
-  </NavLink>
-);
 
 const MenuItem = (props: LiHTMLAttributes<HTMLLIElement>) => (
   <li className="flex flex-row items-center gap-2 text-secondary" {...props} />
@@ -63,15 +50,35 @@ function Navigation() {
     <nav className="pt-24">
       <ul className="flex flex-col gap-[14px]">
         <MenuItem>
-          <MenuLink to="#services">Linkedin</MenuLink>
+          <Link
+            className="flex flex-1 underline text-secondary text-xl font-semibold font-sans"
+            to="https://www.linkedin.com/in/eduarda-desouza/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Linkedin
+          </Link>
           <ArrowExternalLink />
         </MenuItem>
         <MenuItem>
-          <MenuLink to="#portfolio">Medium</MenuLink>
+          <Link
+            className="flex flex-1 underline text-secondary text-xl font-semibold font-sans"
+            to="https://dudasouzaa.medium.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Medium
+          </Link>
           <ArrowExternalLink />
         </MenuItem>
         <MenuItem>
-          <MenuLink to="#contact">Currículo</MenuLink>
+          <Link
+            className="flex flex-1 underline text-secondary text-xl font-semibold font-sans"
+            to="/EduardaDeSouza-Curriculum.pdf"
+            target="_blank"
+          >
+            Currículo
+          </Link>
           <Download />
         </MenuItem>
       </ul>
