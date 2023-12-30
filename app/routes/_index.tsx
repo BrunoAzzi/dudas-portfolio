@@ -6,7 +6,7 @@ import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";
 import { DudasGallery } from "~/components/ImageGallery";
 
-export const meta: MetaFunction = () => [{ title: "Remix Notes" }];
+export const meta: MetaFunction = () => [{ title: "Portfolio | Eduarda" }];
 
 export default function Index() {
   return (
