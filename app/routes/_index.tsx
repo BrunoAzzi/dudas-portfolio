@@ -13,6 +13,10 @@ export const meta: MetaFunction = () => [
     content:
       "Sou uma profissional generalista que aprecia participar de todas as etapas do guarda-chuva de UX, desde a imersão no contexto do usuário até o design visual (UI). Busco proporcionar experiências incríveis com ideias inovadoras e estratégias inteligentes.",
   },
+  {
+    property: "og:image",
+    content: "https://eduardadesouza.com/images/profile-picture.png",
+  },
 ];
 
 export default function Index() {
