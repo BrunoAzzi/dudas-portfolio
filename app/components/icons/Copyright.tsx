@@ -6,20 +6,20 @@ export const CopyRight = () => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <g clip-path="url(#clip0_102_2787)">
+    <g clipPath="url(#clip0_102_2787)">
       <path
         d="M0.531128 4.49997C0.531128 5.55258 0.949273 6.56207 1.69358 7.30637C2.43788 8.05067 3.44737 8.46882 4.49997 8.46882C5.55258 8.46882 6.56207 8.05067 7.30637 7.30637C8.05067 6.56207 8.46882 5.55258 8.46882 4.49997C8.46882 3.44737 8.05067 2.43788 7.30637 1.69358C6.56207 0.949273 5.55258 0.531128 4.49997 0.531128C3.44737 0.531128 2.43788 0.949273 1.69358 1.69358C0.949273 2.43788 0.531128 3.44737 0.531128 4.49997Z"
         stroke="#2D3864"
-        stroke-width="0.58"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="0.58"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M5.57842 3.06219C5.43039 2.64335 4.96956 2.34326 4.50002 2.34326C3.90443 2.34326 3.42163 2.82608 3.42163 3.42165V5.57844C3.42163 6.17404 3.90443 6.65683 4.50002 6.65683C4.96956 6.65683 5.43039 6.35675 5.57842 5.9379"
         stroke="#2D3864"
-        stroke-width="0.58"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="0.58"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </g>
     <defs>

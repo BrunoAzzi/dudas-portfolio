@@ -20,7 +20,7 @@ export default function Index() {
             link="/telemedicina"
             tags={["Desktop"]}
           >
-            <img src="images/telemedicina-mockup.png" />
+            <img src="images/telemedicina-mockup.png" alt="telemedicina" />
           </VerticalCaseCard>
           <VerticalCaseCard
             title="E-learning"
@@ -28,7 +28,7 @@ export default function Index() {
             link="/e-learning"
             tags={["Desktop", "Responsivo"]}
           >
-            <img src="images/restaurante.png" />
+            <img src="images/restaurante.png" alt="restaurante" />
           </VerticalCaseCard>
           <CaseCard
             title="Logística"
