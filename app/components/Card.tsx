@@ -1,40 +1,54 @@
+import { PropsWithChildren } from "react";
 import { FullExternalLink } from "./icons/FullExternalLink";
 import { TagList } from "./Tags";
 
 interface Props {
-  image: string;
   className?: string;
   tags?: string[];
   horizontal?: boolean;
+  title: string;
+  description: string;
+  link: string;
 }
 
-export function CaseCard({ image, className, tags, horizontal = true }: Props) {
+export function CaseCard({
+  className,
+  title,
+  description,
+  tags,
+  horizontal = true,
+  children,
+  link,
+}: PropsWithChildren<Props>) {
   return (
     <div
-      className={`flex relative bg-secondary text-white p-6 rounded-lg ${className}`}
+      className={`flex relative bg-secondary text-white p-6 rounded-2xl ${className}`}
     >
       <div className="flex gap-14">
         <div>
-          <h1 className="text-3xl font-bold mb-2">Telemedicina</h1>
-          <p>
-            Uma solução para profissionais da saúde pública garantirem que os
-            protocolos de saúde sejam respeitados na infância e adolescência.
-          </p>
+          <h1 className="text-white text-[26px] font-bold mb-2">{title}</h1>
+          <p className=" text-white text-base font-normal ">{description}</p>
         </div>
         {tags && !horizontal ? <TagList tags={tags} /> : null}
       </div>
 
-      <img className="" alt="" src={image} />
+      {children}
 
       {tags && horizontal ? <TagList tags={tags} /> : null}
 
-      <button className="text-secondary p-4 rounded-full bg-white absolute bottom-6 right-6">
+      <a
+        href={link}
+        className="text-secondary p-4 rounded-full bg-white absolute bottom-6 right-6"
+      >
         <FullExternalLink size={26} />
-      </button>
+      </a>
     </div>
   );
 }
 
-export const VerticalCaseCard = ({ className, ...props }: Props) => (
+export const VerticalCaseCard = ({
+  className,
+  ...props
+}: PropsWithChildren<Props>) => (
   <CaseCard className={`flex-col ${className}`} horizontal={false} {...props} />
 );

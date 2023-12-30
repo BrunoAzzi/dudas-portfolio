@@ -2,30 +2,42 @@ import type { MetaFunction } from "@remix-run/node";
 
 import { CaseCard, VerticalCaseCard } from "~/components/Card";
 import { ContactSection } from "~/components/ContactSetup";
+import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";
 
 export const meta: MetaFunction = () => [{ title: "Remix Notes" }];
 
 export default function Index() {
   return (
-    <div className="flex flex-col gap-14 items-center mx-auto px-20">
+    <div className="flex flex-col gap-14 mx-auto px-20">
       <Header />
       <div className="grid grid-cols-2 gap-12">
         <VerticalCaseCard
-          image="images/telemedicina-mockup.png"
+          title="Telemedicina"
+          description="Uma solução para profissionais da saúde pública garantirem que os protocolos de saúde sejam respeitados na infância e adolescência."
+          link="/telemedicina"
           tags={["Desktop"]}
-        />
+        >
+          <img src="images/telemedicina-mockup.png" />
+        </VerticalCaseCard>
         <VerticalCaseCard
-          image="images/restaurante.png"
+          title="E-learning"
+          description="Uma solução para profissionais da saúde pública garantirem que os protocolos de saúde sejam respeitados na infância e adolescência."
+          link="/e-learning"
           tags={["Desktop", "Responsivo"]}
-        />
+        >
+          <img src="images/restaurante.png" />
+        </VerticalCaseCard>
         <CaseCard
+          title="Logística"
+          description="Uma solução para profissionais da saúde pública garantirem que os protocolos de saúde sejam respeitados na infância e adolescência."
+          link="/logistica"
           className="col-span-full"
-          image="images/telemedicina-mockup.png"
           tags={["Desktop"]}
         />
       </div>
       <ContactSection />
+      <Footer />
     </div>
   );
 }
