@@ -21,12 +21,20 @@ module.exports = {
   },
 
   // Base config
-  extends: ['@ae-studio/eslint-config/typescript', '@ae-studio/eslint-config/prettier'],
+  extends: ["eslint:recommended"],
 
   overrides: [
     // React
     {
       files: ["**/*.{js,jsx,ts,tsx}"],
+      plugins: ["react", "jsx-a11y"],
+      extends: [
+        "plugin:react/recommended",
+        "plugin:react/jsx-runtime",
+        "plugin:react-hooks/recommended",
+        "plugin:jsx-a11y/recommended",
+        "prettier",
+      ],
       settings: {
         react: {
           version: "detect",
@@ -41,6 +49,41 @@ module.exports = {
         "react/jsx-no-leaked-render": [
           "warn",
           { validStrategies: ["ternary"] },
+        ],
+      },
+    },
+
+    // Typescript
+    {
+      files: ["**/*.{ts,tsx}"],
+      plugins: ["@typescript-eslint", "import"],
+      parser: "@typescript-eslint/parser",
+      settings: {
+        "import/internal-regex": "^~/",
+        "import/resolver": {
+          node: {
+            extensions: [".ts", ".tsx"],
+          },
+          typescript: {
+            alwaysTryTypes: true,
+          },
+        },
+      },
+      extends: [
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/stylistic",
+        "plugin:import/recommended",
+        "plugin:import/typescript",
+        "prettier",
+      ],
+      rules: {
+        "import/order": [
+          "error",
+          {
+            alphabetize: { caseInsensitive: true, order: "asc" },
+            groups: ["builtin", "external", "internal", "parent", "sibling"],
+            "newlines-between": "always",
+          },
         ],
       },
     },
