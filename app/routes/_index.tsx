@@ -20,7 +20,7 @@ export default function Index() {
             link="/telemedicina"
             tags={["Desktop"]}
           >
-            <img src="images/telemedicina-mockup.png" alt="telemedicina" />
+            <img src="images/case-image.png" alt="case" />
           </VerticalCaseCard>
           <VerticalCaseCard
             title="E-learning"
@@ -28,15 +28,17 @@ export default function Index() {
             link="/e-learning"
             tags={["Desktop", "Responsivo"]}
           >
-            <img src="images/restaurante.png" alt="restaurante" />
+            <img src="images/case-image.png" alt="case" />
           </VerticalCaseCard>
           <CaseCard
             title="Logística"
             description="Uma solução para profissionais da saúde pública garantirem que os protocolos de saúde sejam respeitados na infância e adolescência."
             link="/logistica"
             className="col-span-full"
-            tags={["Desktop"]}
-          />
+            tags={["Desktop", "Responsivo"]}
+          >
+            <img src="images/case-image.png" alt="case" />
+          </CaseCard>
         </div>
         <ContactSection />
       </div>

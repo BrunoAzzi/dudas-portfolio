@@ -26,14 +26,14 @@ const Presentation = () => (
   <div className="flex flex-col justify-between pt-24">
     <div className="flex flex-col gap-[18px]">
       <h1 className="text-pink-500 text-[64px] font-black ">Oie!</h1>
-      <div className="w-[521px]">
-        <span className="text-secondary text-[40px] font-semibold">
+      <h1>
+        <span className="text-secondary text-[40px] font-semibold leading-none">
           Meu nome é Eduarda de Souza e sou{" "}
         </span>
         <span className="text-secondary text-[40px] font-extrabold">
           UX Designer
         </span>
-      </div>
+      </h1>
       <div className="text-secondary text-xl font-normal">
         Sou uma profissional generalista que aprecia participar de todas as
         etapas do guarda-chuva de UX, desde a imersão no contexto do usuário até
