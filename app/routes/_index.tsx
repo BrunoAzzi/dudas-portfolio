@@ -2,7 +2,6 @@ import type { MetaFunction } from "@remix-run/node";
 
 import { CaseCard, VerticalCaseCard } from "~/components/CaseCard";
 import { ContactSection } from "~/components/ContactSetup";
-import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";
 import { CopyRight } from "~/components/icons/Copyright";
 import { DudasGallery } from "~/components/ImageGallery";
