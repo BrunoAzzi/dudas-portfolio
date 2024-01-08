@@ -16,10 +16,15 @@ export function ContactSection() {
             </p>
           </div>
 
-          <button className="flex items-center justify-center gap-1 bg-primary text-white text-sm font-bold rounded-md py-3 px-5">
+          <a
+            href="https://wa.me/5548999102094"
+            target="_blank"
+            className="flex items-center justify-center gap-1 bg-primary text-white text-sm font-bold rounded-md py-3 px-5"
+            rel="noreferrer"
+          >
             <span>Conversar com a Duda</span>
             <ArrowExternalLink size={14} />
-          </button>
+          </a>
         </div>
         <div className="w-[140px] h-[132px]">
           <HeartChatBubble />
