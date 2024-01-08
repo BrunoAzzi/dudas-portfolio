@@ -21,7 +21,7 @@ const Presentation = () => (
           UX Designer
         </span>
       </h1>
-      <div className="text-secondary text-xl font-normal">
+      <div className="text-secondary text-xl font-normal max-w-[519px]">
         Sou uma profissional generalista que aprecia participar de todas as
         etapas do guarda-chuva de UX, desde a imersão no contexto do usuário até
         o design visual (UI). <br />
