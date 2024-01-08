@@ -1,6 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
 
-import { CaseCard, VerticalCaseCard } from "~/components/Card";
+import { CaseCard, VerticalCaseCard } from "~/components/CaseCard";
 import { ContactSection } from "~/components/ContactSetup";
 import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";
