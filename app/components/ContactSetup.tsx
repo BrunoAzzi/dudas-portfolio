@@ -4,13 +4,13 @@ import { HeartChatBubble } from "./icons/HeartChatBubble";
 export function ContactSection() {
   return (
     <div className="flex gap-4 flex-col align-middle items-start justify-center max-w-md mx-auto">
-      <h2 className="text-secondary text-[40px] font-black">
+      <h2 className="text-secondary text-[34px] md:text-[40px] font-black">
         Vamos conversar?
       </h2>
-      <div className="flex justify-between gap-[27px] grow-0">
+      <div className="flex justify-between md:gap-[27px] grow-0">
         <div className="flex flex-col gap-5 py-1 items-start">
           <div className="flex grow overflow-hidden">
-            <p className="text-secondary text-sm font-normal max-w-[238px]">
+            <p className="text-secondary text-sm font-normal md:max-w-[238px]">
               Tem alguma dúvida ou gostaria de bater um papo sobre design? Me
               chame {";)"}
             </p>

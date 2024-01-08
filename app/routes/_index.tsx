@@ -4,6 +4,7 @@ import { CaseCard, VerticalCaseCard } from "~/components/CaseCard";
 import { ContactSection } from "~/components/ContactSetup";
 import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";
+import { CopyRight } from "~/components/icons/Copyright";
 import { DudasGallery } from "~/components/ImageGallery";
 
 export const meta: MetaFunction = () => [
@@ -27,9 +28,9 @@ export const meta: MetaFunction = () => [
 export default function Index() {
   return (
     <div className="flex flex-col">
-      <div className="flex flex-col px-20 gap-14">
+      <div className="flex flex-col px-5 md:px-20 gap-14">
         <Header />
-        <div className="grid grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <VerticalCaseCard
             title="Telemedicina"
             description="Uma solução para profissionais da saúde pública garantirem que os protocolos de saúde sejam respeitados na infância e adolescência."
@@ -61,9 +62,14 @@ export default function Index() {
 
       <DudasGallery />
 
-      <div className="flex flex-col px-20 gap-14">
-        <Footer />
-      </div>
+      <footer className="flex px-5 md:px-20">
+        <div className="flex grow justify-start items-center border-t border-secondary border-opacity-10 py-5 md:px-5 md:mb-2 gap-1">
+          <CopyRight />
+          <span className="text-slate-700 text-[10px] font-light font-sans">
+            Eduarda de Souza, 2023
+          </span>
+        </div>
+      </footer>
     </div>
   );
 }

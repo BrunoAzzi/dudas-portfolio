@@ -23,7 +23,7 @@ export function CaseCard({
 }: PropsWithChildren<Props>) {
   return (
     <div
-      className={`flex relative bg-secondary text-white p-6 rounded-2xl shadow-md duration-300 hover:scale-105 hover:shadow-xl hover:shadow-xl" ${className}`}
+      className={`flex relative bg-secondary text-white p-6 rounded-2xl shadow-md duration-300 hover:scale-105 hover:shadow-xl hover:shadow-xl overflow-hidden ${className}`}
     >
       <div className="flex gap-14">
         <div>

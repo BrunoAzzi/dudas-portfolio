@@ -10,16 +10,12 @@ const MenuItem = (props: LiHTMLAttributes<HTMLLIElement>) => (
 );
 
 const Presentation = () => (
-  <div className="flex flex-col justify-between pt-24">
+  <div className="flex flex-col justify-between py-[83px] md:pt-24 md:pb-0">
     <div className="flex flex-col gap-[18px]">
       <h1 className="text-pink-500 text-[64px] font-black ">Oie!</h1>
-      <h1>
-        <span className="text-secondary text-[40px] font-semibold leading-none">
-          Meu nome é Eduarda de Souza e sou{" "}
-        </span>
-        <span className="text-secondary text-[40px] font-extrabold">
-          UX Designer
-        </span>
+      <h1 className="text-secondary text-4xl md:text-[40px] font-semibold md:leading-none">
+        <span className="">Meu nome é Eduarda de Souza e sou </span>
+        <span className="font-extrabold">UX Designer</span>
       </h1>
       <div className="text-secondary text-xl font-normal max-w-[519px]">
         Sou uma profissional generalista que aprecia participar de todas as
@@ -28,18 +24,22 @@ const Presentation = () => (
         Busco proporcionar experiências incríveis com ideias inovadoras e
         estratégias inteligentes.
       </div>
-    </div>
-    <div className="flex text-primary items-center text-xl font-bold">
-      <span>Confira alguns projetos</span> <ArrowDownIcon />
+      <div className="flex text-primary items-center text-xl font-bold">
+        <span>Confira alguns projetos</span> <ArrowDownIcon />
+      </div>
     </div>
   </div>
 );
 
 export function Header() {
   return (
-    <header className="flex justify-between">
+    <header className="flex max-sm:flex-wrap justify-between">
       <Presentation />
-      <img className="mx-28" alt="" src="images/profile-picture.png" />
+      <img
+        className="max-sm:-ml-5 max-sm:w-[180px] max-sm:h-[302px] rounded-r-3xl md:rounded-r-none md:rounded-b-3xl md:mx-28"
+        alt=""
+        src="images/profile-picture.png"
+      />
       <Navigation />
     </header>
   );
