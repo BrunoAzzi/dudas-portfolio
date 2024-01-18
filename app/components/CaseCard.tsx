@@ -48,7 +48,9 @@ export function CaseCard({
         {link ? (
           <a
             href={link}
+            target="_blank"
             className=" p-3 rounded-full bg-violet-400 inline-flex absolute right-0 bottom-0"
+            rel="noreferrer"
           >
             <FullExternalLink size={17} />
           </a>
