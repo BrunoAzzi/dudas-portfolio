@@ -31,14 +31,14 @@ export default function Index() {
         <Header />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <CaseCard
-            title="Dashboard "
+            title="Dashboard"
             description="Análise socioeconômica e saúde da população"
             link="https://www.notion.so/Dashboard-de-Telemedicina-8fd63c930af24673b8485b3bb3518518"
             tags={["Web", "B2B", "Telemedicina"]}
           >
             <img
               src="images/telemedicina.png"
-              srcSet="images/telemedicina1.5x.png 1.5x, images/logistica2x.png 2x, images/telemedicina3x.png 3x"
+              srcSet="images/telemedicina1.5x.png 1.5x, images/telemedicina2x.png 2x, images/telemedicina3x.png 3x"
               alt="case"
               className="w-[281px] h-[212px]"
             />
