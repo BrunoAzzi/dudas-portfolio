@@ -61,10 +61,3 @@ export function CaseCard({
     </div>
   );
 }
-
-export const VerticalCaseCard = ({
-  className,
-  ...props
-}: PropsWithChildren<Props>) => (
-  <CaseCard className={`flex-col ${className}`} horizontal={false} {...props} />
-);
