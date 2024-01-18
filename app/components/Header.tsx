@@ -11,7 +11,7 @@ const MenuItem = (props: LiHTMLAttributes<HTMLLIElement>) => (
 
 const Presentation = () => (
   <div className="flex flex-col justify-between py-[83px] md:pt-24 md:pb-0">
-    <div className="flex flex-col gap-[18px]">
+    <div className="flex flex-col h-full gap-[18px]">
       <h1 className="text-pink-500 text-[64px] font-black ">Oie!</h1>
       <h1 className="text-secondary text-4xl md:text-[40px] font-semibold md:leading-none">
         <span className="">Meu nome é Eduarda de Souza e sou </span>
@@ -24,23 +24,26 @@ const Presentation = () => (
         Busco proporcionar experiências incríveis com ideias inovadoras e
         estratégias inteligentes.
       </div>
-      <div className="flex text-primary items-center text-xl font-bold">
-        <span>Confira alguns projetos</span> <ArrowDownIcon />
-      </div>
+    </div>
+    <div className="flex text-primary items-center text-xl font-bold max-md:hidden mt-4">
+      <span>Confira alguns projetos</span> <ArrowDownIcon />
     </div>
   </div>
 );
 
 export function Header() {
   return (
-    <header className="flex max-sm:flex-wrap justify-between">
+    <header className="flex max-md:flex-wrap justify-between">
       <Presentation />
       <img
-        className="max-sm:-ml-5 max-sm:w-[180px] max-sm:h-[302px] rounded-r-3xl md:rounded-r-none md:rounded-b-3xl md:mx-28"
+        className="max-md:-ml-5 max-w-[180px] max-h-[302px] md:max-w-[384px] md:max-h-[644px] max-md:rounded-r-3xl md:rounded-b-3xl md:mx-28 object-cover"
         alt=""
-        src="images/profile-picture.png"
+        src="images/profile-picture.jpeg"
       />
       <Navigation />
+      <div className="flex text-primary items-center text-xl font-bold md:hidden mt-12">
+        <span>Confira alguns projetos</span> <ArrowDownIcon />
+      </div>
     </header>
   );
 }

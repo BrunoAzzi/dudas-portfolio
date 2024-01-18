@@ -54,7 +54,7 @@ export function CaseCard({
             <p className="  text-lg font-normal">{description}</p>
           </div>
 
-          <div className="flex max-sm:hidden w-full flex-col">
+          <div className="flex max-md:hidden w-full flex-col">
             <InteractiveTags link={link} />
           </div>
         </div>
