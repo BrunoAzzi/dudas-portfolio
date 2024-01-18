@@ -26,34 +26,59 @@ export const meta: MetaFunction = () => [
 
 export default function Index() {
   return (
-    <div className="flex flex-col">
-      <div className="flex flex-col px-5 md:px-20 gap-14">
+    <div className="flex flex-col mx-auto max-w-[1440px]">
+      <div className="flex flex-col px-5 md:px-20  gap-14">
         <Header />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <VerticalCaseCard
-            title="Telemedicina"
-            description="Uma solução para profissionais da saúde pública garantirem que os protocolos de saúde sejam respeitados na infância e adolescência."
-            link="/telemedicina"
-            tags={["Desktop"]}
-          >
-            <img src="images/case-image.png" alt="case" />
-          </VerticalCaseCard>
-          <VerticalCaseCard
-            title="E-learning"
-            description="Uma solução para profissionais da saúde pública garantirem que os protocolos de saúde sejam respeitados na infância e adolescência."
-            link="/e-learning"
-            tags={["Desktop", "Responsivo"]}
-          >
-            <img src="images/case-image.png" alt="case" />
-          </VerticalCaseCard>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <CaseCard
-            title="Logística"
-            description="Uma solução para profissionais da saúde pública garantirem que os protocolos de saúde sejam respeitados na infância e adolescência."
-            link="/logistica"
-            className="col-span-full"
-            tags={["Desktop", "Responsivo"]}
+            title="Dashboard "
+            description="Análise socioeconômica e saúde da população"
+            link="/telemedicina"
+            tags={["Web", "B2B", "Telemedicina"]}
           >
-            <img src="images/case-image.png" alt="case" />
+            <img
+              src="images/telemedicina.png"
+              srcSet="images/telemedicina1.5x.png 1.5x, images/logistica2x.png 2x, images/telemedicina3x.png 3x"
+              alt="case"
+              className="w-[281px] h-[212px]"
+            />
+          </CaseCard>
+          <CaseCard
+            title="Plataforma"
+            description="Gestão de entregas para motoristas autônomos"
+            link="/logistica"
+            tags={["Web responsivo", "B2B", "Logística"]}
+          >
+            <img
+              src="images/logistica.png"
+              srcSet="images/logistica1.5x.png 1.5x, images/logistica2x.png 2x, images/logistica3x.png 3x"
+              alt="case"
+              className="w-[281px] h-[212px]"
+            />
+          </CaseCard>
+          <CaseCard
+            title="Plataforma"
+            description="Ambiente de cursos para educação empresarial"
+            tags={["Web responsivo", "B2B", "E-learning"]}
+          >
+            <img
+              src="images/elearning.png"
+              srcSet="images/elearning2x.png 2x, images/logistica2x.png 2x, images/elearning3x.png 3x"
+              alt="case"
+              className="w-[281px] h-[212px]"
+            />
+          </CaseCard>
+          <CaseCard
+            title="Gamificação"
+            description="Ambiente de cursos para educação empresarial"
+            tags={["Web responsivo", "B2B", "E-learning"]}
+          >
+            <img
+              src="images/elearning.png"
+              srcSet="images/elearning2x.png 2x, images/logistica2x.png 2x, images/elearning3x.png 3x"
+              alt="case"
+              className="w-[281px] h-[212px]"
+            />
           </CaseCard>
         </div>
         <ContactSection />
