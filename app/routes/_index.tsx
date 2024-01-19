@@ -33,7 +33,7 @@ export default function Index() {
           <CaseCard
             title="Dashboard"
             description="Análise socioeconômica e saúde da população"
-            link="https://www.notion.so/Dashboard-de-Telemedicina-8fd63c930af24673b8485b3bb3518518"
+            link="https://eduardadesouza.notion.site/Dashboard-de-Telemedicina-5792317104b14b7cbf2e14f92b370a1b"
             tags={["Web", "B2B", "Telemedicina"]}
           >
             <img
@@ -46,7 +46,7 @@ export default function Index() {
           <CaseCard
             title="Plataforma"
             description="Gestão de entregas para motoristas autônomos"
-            link="https://www.notion.so/Plataforma-de-log-stica-8fd63c930af24673b8485b3bb3518518"
+            link="https://eduardadesouza.notion.site/Agile-Flex-Plataforma-log-stica-8fd63c930af24673b8485b3bb3518518"
             tags={["Web responsivo", "B2B", "Logística"]}
           >
             <img
