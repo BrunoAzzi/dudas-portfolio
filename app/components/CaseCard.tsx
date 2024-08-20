@@ -1,3 +1,4 @@
+import { Link } from "@remix-run/react";
 import { PropsWithChildren } from "react";
 
 import { FullExternalLink } from "./icons/FullExternalLink";
@@ -21,14 +22,9 @@ const CommingSoon = () => (
 
 const InteractiveTags = ({ link }: { link?: string }) =>
   link ? (
-    <a
-      href={link}
-      target="_blank"
-      className="p-3 rounded-full bg-violet-400 inline-flex absolute right-0 bottom-0 md:relative md:self-end"
-      rel="noreferrer"
-    >
+    <span className="p-3 rounded-full bg-violet-400 inline-flex absolute right-0 bottom-0 md:relative md:self-end">
       <FullExternalLink size={17} />
-    </a>
+    </span>
   ) : (
     <CommingSoon />
   );
@@ -42,7 +38,10 @@ export function CaseCard({
   link,
 }: PropsWithChildren<Props>) {
   return (
-    <div
+    <Link
+      to={link ?? "#"}
+      target="_blank"
+      rel="noreferrer"
       className={`flex flex-col md:flex-row-reverse gap-8 items-center bg-secondary text-white p-7 md:p-8 rounded-2xl shadow-md duration-300 hover:scale-[102%] hover:shadow-xl hover:shadow-xl overflow-hidden ${className}`}
     >
       <div className="flex flex-col justify-between gap-10 w-full">
@@ -67,6 +66,6 @@ export function CaseCard({
           <InteractiveTags link={link} />
         </span>
       </div>
-    </div>
+    </Link>
   );
 }

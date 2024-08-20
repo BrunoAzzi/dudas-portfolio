@@ -66,7 +66,7 @@ function Navigation() {
         <MenuItem>
           <Link
             className="flex flex-1 underline text-secondary text-xl font-semibold font-sans"
-            to="https://dudasouzaa.medium.com/"
+            to="https://dudaux.medium.com/"
             target="_blank"
             rel="noreferrer"
           >
