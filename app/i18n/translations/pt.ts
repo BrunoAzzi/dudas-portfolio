@@ -1,4 +1,6 @@
-export const pt = {
+import type { Translation } from "./types";
+
+export const pt: Translation = {
   meta: {
     title: "Portfolio | Eduarda",
     description:
@@ -51,4 +53,4 @@ export const pt = {
     pt: "PT",
     en: "EN",
   },
-} as const;
+};

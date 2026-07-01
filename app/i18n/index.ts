@@ -1,8 +1,9 @@
 import type { Locale } from "./locales";
 import { en } from "./translations/en";
 import { pt } from "./translations/pt";
+import type { Translation } from "./translations/types";
 
-export type Translation = typeof pt;
+export type { Translation } from "./translations/types";
 
 const translations: Record<Locale, Translation> = {
   pt,

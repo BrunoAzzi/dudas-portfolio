@@ -1,6 +1,6 @@
-import type { pt } from "./pt";
+import type { Translation } from "./types";
 
-export const en: typeof pt = {
+export const en: Translation = {
   meta: {
     title: "Portfolio | Eduarda",
     description:
