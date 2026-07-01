@@ -1,6 +1,8 @@
 import { Link } from "@remix-run/react";
 import { PropsWithChildren } from "react";
 
+import { useI18n } from "~/i18n/I18nProvider";
+
 import { FullExternalLink } from "./icons/FullExternalLink";
 import { TagList } from "./Tags";
 
@@ -12,13 +14,17 @@ interface Props {
   link?: string;
 }
 
-const CommingSoon = () => (
-  <div className="w-[87px] h-[31px] px-3 py-1.5 bg-amber-500 rounded-md justify-center items-center gap-3 inline-flex absolute md:relative left-0 top-0">
-    <div className="text-center text-white text-xs font-bold font-['Montserrat']">
-      Em breve
+const ComingSoon = () => {
+  const { t } = useI18n();
+
+  return (
+    <div className="w-[87px] h-[31px] px-3 py-1.5 bg-amber-500 rounded-md justify-center items-center gap-3 inline-flex absolute md:relative left-0 top-0">
+      <div className="text-center text-white text-xs font-bold font-['Montserrat']">
+        {t.caseCard.comingSoon}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const InteractiveTags = ({ link }: { link?: string }) =>
   link ? (
@@ -26,7 +32,7 @@ const InteractiveTags = ({ link }: { link?: string }) =>
       <FullExternalLink size={17} />
     </span>
   ) : (
-    <CommingSoon />
+    <ComingSoon />
   );
 
 export function CaseCard({

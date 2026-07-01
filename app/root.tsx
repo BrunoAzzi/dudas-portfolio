@@ -1,5 +1,6 @@
 import { cssBundleHref } from "@remix-run/css-bundle";
-import type { LinksFunction } from "@remix-run/node";
+import type { LinksFunction, LoaderFunctionArgs } from "@remix-run/node";
+import { json } from "@remix-run/node";
 import {
   Links,
   LiveReload,
@@ -7,8 +8,11 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useLoaderData,
 } from "@remix-run/react";
 
+import { I18nProvider } from "~/i18n/I18nProvider";
+import { getLocaleFromRequest } from "~/i18n/locales";
 import stylesheet from "~/tailwind.css";
 
 export const links: LinksFunction = () => [
@@ -16,9 +20,15 @@ export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 ];
 
+export async function loader({ request }: LoaderFunctionArgs) {
+  return json({ locale: getLocaleFromRequest(request) });
+}
+
 export default function App() {
+  const { locale } = useLoaderData<typeof loader>();
+
   return (
-    <html lang="en" className="h-full">
+    <html lang={locale} className="h-full">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -26,7 +36,9 @@ export default function App() {
         <Links />
       </head>
       <body className="h-full">
-        <Outlet />
+        <I18nProvider locale={locale}>
+          <Outlet />
+        </I18nProvider>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />

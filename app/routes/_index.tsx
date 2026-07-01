@@ -5,36 +5,45 @@ import { ContactSection } from "~/components/ContactSetup";
 import { Header } from "~/components/Header";
 import { CopyRight } from "~/components/icons/Copyright";
 import { DudasGallery } from "~/components/ImageGallery";
+import { getTranslations, type Locale } from "~/i18n";
+import { useI18n } from "~/i18n/I18nProvider";
 
-export const meta: MetaFunction = () => [
-  { title: "Portfolio | Eduarda" },
-  {
-    name: "description",
-    content:
-      "Sou uma profissional generalista que aprecia participar de todas as etapas do guarda-chuva de UX, desde a imersão no contexto do usuário até o design visual (UI). Busco proporcionar experiências incríveis com ideias inovadoras e estratégias inteligentes.",
-  },
-  {
-    property: "og:description",
-    content:
-      "Sou uma profissional generalista que aprecia participar de todas as etapas do guarda-chuva de UX, desde a imersão no contexto do usuário até o design visual (UI). Busco proporcionar experiências incríveis com ideias inovadoras e estratégias inteligentes.",
-  },
-  {
-    property: "og:image",
-    content: "https://eduardadesouza.com/images/profile-picture.png",
-  },
-];
+export const meta: MetaFunction = ({ matches }) => {
+  const rootMatch = matches.find((match) => match.id === "root");
+  const locale =
+    (rootMatch?.data as { locale: Locale } | undefined)?.locale ?? "pt";
+  const t = getTranslations(locale);
+
+  return [
+    { title: t.meta.title },
+    {
+      name: "description",
+      content: t.meta.description,
+    },
+    {
+      property: "og:description",
+      content: t.meta.description,
+    },
+    {
+      property: "og:image",
+      content: "https://eduardadesouza.com/images/profile-picture.png",
+    },
+  ];
+};
 
 export default function Index() {
+  const { t } = useI18n();
+
   return (
     <div className="flex flex-col mx-auto max-w-[1440px]">
       <div className="flex flex-col px-5 md:px-20  gap-14">
         <Header />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <CaseCard
-            title="Dashboard"
-            description="Análise socioeconômica e saúde da população"
+            title={t.cases.telemedicine.title}
+            description={t.cases.telemedicine.description}
             link="https://eduardadesouza.notion.site/Dashboard-de-Telemedicina-5792317104b14b7cbf2e14f92b370a1b"
-            tags={["Web", "B2B", "Telemedicina"]}
+            tags={[...t.cases.telemedicine.tags]}
           >
             <img
               src="images/telemedicina.png"
@@ -44,10 +53,10 @@ export default function Index() {
             />
           </CaseCard>
           <CaseCard
-            title="Plataforma"
-            description="Gestão de entregas para motoristas autônomos"
+            title={t.cases.logistics.title}
+            description={t.cases.logistics.description}
             link="https://eduardadesouza.notion.site/Agile-Flex-Plataforma-log-stica-8fd63c930af24673b8485b3bb3518518"
-            tags={["Web responsivo", "B2B", "Logística"]}
+            tags={[...t.cases.logistics.tags]}
           >
             <img
               src="images/logistica.png"
@@ -57,9 +66,9 @@ export default function Index() {
             />
           </CaseCard>
           <CaseCard
-            title="Plataforma"
-            description="Ambiente de cursos para educação empresarial"
-            tags={["Web responsivo", "B2B", "E-learning"]}
+            title={t.cases.elearning.title}
+            description={t.cases.elearning.description}
+            tags={[...t.cases.elearning.tags]}
           >
             <img
               src="images/elearning.png"
@@ -69,9 +78,9 @@ export default function Index() {
             />
           </CaseCard>
           <CaseCard
-            title="Gamificação"
-            description="Ambiente de cursos para educação empresarial"
-            tags={["Web responsivo", "B2B", "E-learning"]}
+            title={t.cases.gamification.title}
+            description={t.cases.gamification.description}
+            tags={[...t.cases.gamification.tags]}
           >
             <img
               src="images/elearning.png"
