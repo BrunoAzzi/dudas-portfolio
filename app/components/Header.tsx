@@ -3,10 +3,10 @@ import { LiHTMLAttributes } from "react";
 
 import { useI18n } from "~/i18n/I18nProvider";
 
-import { LanguageSelector } from "./LanguageSelector";
 import { ArrowDownIcon } from "./icons/ArrowDownIcon";
 import { ArrowExternalLink } from "./icons/ArrowExternalLink";
 import { Download } from "./icons/Download";
+import { LanguageSelector } from "./LanguageSelector";
 
 const MenuItem = (props: LiHTMLAttributes<HTMLLIElement>) => (
   <li className="flex flex-row items-center gap-2 text-secondary" {...props} />
